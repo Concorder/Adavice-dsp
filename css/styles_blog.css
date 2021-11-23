@@ -1,4 +1,3 @@
-
 /*FOR BLOG MAIN PAGE*/
 .blog_main header{
 	height: fit-content;
@@ -926,11 +925,11 @@
 
 @media (max-width: 980px){
 	.blog_updates .hero {
-		padding: 55px 0 70px;
+		padding: 166px 0 70px;
 	}
 
 	.blog_updates .hero .container {
-		margin-top: 0px;
+		margin-top: 55px;
 	}
 
 	.blog_updates .desk.social{
@@ -957,7 +956,7 @@
 	.blog_updates .article_container{
 		flex-direction: column;
 		height: fit-content;
-		width: 100%;
+		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 24px;
