@@ -1806,3 +1806,7 @@
 		margin-top: 5px;
 	}
 }
+
+.tag{
+	cursor: pointer;
+}
