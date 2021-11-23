@@ -1457,16 +1457,16 @@
     display: none;
 }
 
-#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper{
+.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper{
 	border-radius: 0px !important;
 }
 
-#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper.embedForm{
+.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper.embedForm{
 	max-width: initial !important;
 }
 
-#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
-#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
+.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
+.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
 	width: 40% !important;
 	margin: auto !important;
 }
@@ -1506,8 +1506,8 @@
         padding-bottom: 25px;
     }
 
-	#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
-	#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
+	.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
+	.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
 		width: 50% !important;
 	}
 }
@@ -1554,8 +1554,8 @@
 		margin-bottom: 0;
 	}
 
-	#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
-	#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
+	.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
+	.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
 		width: 70% !important;
 	}
 }
@@ -1661,8 +1661,8 @@
 		text-align: center;
 	}
 
-	#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
-	#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
+	.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
+	.blog_article #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
 		width: 100% !important;
 		margin: auto !important;
 	}
