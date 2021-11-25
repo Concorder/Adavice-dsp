@@ -109,6 +109,10 @@
 	width: 24px;
 }
 
+.blog_main a{
+	color: inherit;
+}
+
 .blog_main .hero{
 	background: #fff;
 	height: fit-content;
