@@ -365,42 +365,48 @@
 		background-position: right;
 	}
 	.halfblock .wrapper {
-		height: 100vh;
+    	height: 100vh;
 	}
 	.halfblock form {
 		width: 100% !important;
 		color: var(--main-color);
 	}
+
 	.halfblock .button, .halfblock form .email {
 		width: 80%;
 	}
+
 	.halfblock form >textarea, .halfblock form input:not(.button) {
 		width: 100%;
 	}
+
 	.copyright{
 		bottom: 20px;
 	}
 
 	footer{
-		height: 450px;
+		height: 400px;
 	}
+
 	footer .logo {
 		width: 130px;
 	}
+
 	footer .rightblock > a {
         margin-right: 0px;
-
-display: block;
+        display: block;
 		font-size: 14px;
 	}
+
 	.rightblock a:not(:last-child) {
 		margin-bottom: 6px;
 	}
 
 	.leftblock span {
 		margin: 0px;
-		font-size: 14px;
+		font-size: 13px;
 	}
+
 	footer .social {
 		display: flex;
 		position: absolute;

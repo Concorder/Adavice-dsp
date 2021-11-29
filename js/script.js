@@ -13,9 +13,13 @@ $(document).ready(function(){
         $('#services_sub').slideUp(50);
         });
 
-
-
+        $('#company').hover(function() {
+            $('#company_sub').slideDown(200);
+        }, function(){
+            $('#company_sub').slideUp(50);
+            });
 });
+
 let today = new Date();
 let year = today.getFullYear();
 $('#year').text(year);

@@ -44,6 +44,7 @@
 			</div>
 		</div>
 	</div>
+
 	<header>
 		<div class="wrapper">
 			<a href="./index.html"><img class="logo" src="./img/logo.png" alt=""></a>
@@ -54,17 +55,21 @@
 			</div>
 			<ul class="desk-menu">
 				<li><a href="./contact.html#form2" class="button">Get in touch</a></li>
-				<li class="active"><a href="./index.html">Home</a></li>
 				<li id="services">Services
 					<ul id="services_sub" class="submenu">
-						<li><a href="./services.html">Marketing</a></li>
+						<li><a href="./services.html">Enterprise</a></li>
 						<li><a href="./dsp.html">Self-Serve Ad&nbsp;Platform</a></li>
-						<li><a href="./ppc.html">PPC</a></li>
+						<li style="display: none;"><a href="./ppc.html">PPC</a></li>
 					</ul>
 				</li>
-				<li><a href="./about.html">About Us</a></li>
-				<li><a href="./events.html">Events</a></li>
+				<li id="company">Company
+					<ul id="company_sub" class="submenu">
+						<li><a href="./about.html">About Us</a></li>
+						<li><a href="./events.html">Events</a></li>
+					</ul>
+				</li>
 				<li><a href="./careers.html">Careers</a></li>
+				<li><a href="./blog.html">Blog</a></li>
 				<li><a href="./contact.html">Contacts</a></li>
 			</ul>
 			<nav id="navigation" class="mob-navigation">
@@ -81,23 +86,7 @@
 					</svg>
 				</div>
 				<ul class="menu-items-container">
-					<li><a href="./index.html">
-							<span class="menu-text-icons circle-icon">
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home"
-									class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 576 512">
-									<path fill="currentColor"
-										d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
-
-									</path>
-								</svg>
-							</span>
-							<span class="menu-text">Home</span>
-							<div class="bottom-border"></div>
-						</a>
-					</li>
 					<li id="service_m">
-
 						<span class="menu-text-icons circle-icon">
 							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code-branch"
 								class="svg-inline--fa fa-code-branch fa-w-12" role="img"
@@ -110,9 +99,9 @@
 						<span class="menu-text">Services</span>
 						<div class="bottom-border"></div>
 						<ul id="submenu_mb">
-							<li><a href="./services.html">Marketing</a></li>
+							<li><a href="./services.html">Enterprise</a></li>
 							<li><a href="./dsp.html">Self-Serve Ad Platform</a></li>
-							<li><a href="./ppc.html">PPC</a></li>
+							<li style="display: none;"><a href="./ppc.html">PPC</a></li>
 						</ul>
 						<div class="bottom-border"></div>
 					</li>
@@ -172,6 +161,19 @@
 							<div class="bottom-border"></div>
 						</a>
 					</li>
+
+					<li><a href="./blog.html">
+						<span class="menu-text-icons circle-icon">
+
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.72 16.456L9.481 15.948L20.084 5.21797C20.1676 5.13226 20.2142 5.0171 20.2136 4.89735C20.2131 4.77761 20.1654 4.66288 20.081 4.57797L19.446 3.93597C19.405 3.89381 19.3559 3.86024 19.3018 3.83723C19.2477 3.81421 19.1895 3.80222 19.1306 3.80194C19.0718 3.80166 19.0135 3.8131 18.9591 3.8356C18.9048 3.8581 18.8554 3.8912 18.814 3.93297L8.239 14.635L7.719 16.455L7.72 16.456ZM20.703 2.66397L21.338 3.30697C22.214 4.19397 22.222 5.62497 21.354 6.50297L10.428 17.561L6.664 18.645C6.4342 18.7093 6.18826 18.6798 5.98016 18.563C5.77206 18.4462 5.6188 18.2516 5.554 18.022C5.50578 17.8568 5.50509 17.6815 5.552 17.516L6.647 13.676L17.544 2.64697C17.7512 2.43833 17.9979 2.27303 18.2696 2.16072C18.5414 2.04841 18.8328 1.99134 19.1269 1.99283C19.4209 1.99432 19.7117 2.05434 19.9823 2.1694C20.2529 2.28445 20.4979 2.45224 20.703 2.66297V2.66397ZM9.184 3.81697C9.68 3.81697 10.082 4.22397 10.082 4.72597C10.0828 4.84464 10.0602 4.9623 10.0155 5.07222C9.97076 5.18215 9.90481 5.28218 9.82141 5.3666C9.73801 5.45102 9.63879 5.51818 9.52942 5.56423C9.42004 5.61028 9.30267 5.63431 9.184 5.63497H5.592C4.6 5.63497 3.796 6.44897 3.796 7.45197V18.358C3.796 19.362 4.6 20.176 5.592 20.176H16.368C17.36 20.176 18.165 19.362 18.165 18.358V14.723C18.165 14.221 18.567 13.814 19.063 13.814C19.559 13.814 19.961 14.221 19.961 14.724V18.358C19.961 20.366 18.352 21.994 16.368 21.994H5.592C3.608 21.994 2 20.366 2 18.358V7.45197C2 5.44497 3.608 3.81697 5.592 3.81697H9.184V3.81697Z" fill="white"/>
+								</svg>
+								
+						</span>
+						<span class="menu-text">Blog</span>
+						<div class="bottom-border"></div>
+					</a>
+				</li>
 
 					<li><a href="./contact.html">
 							<span class="menu-text-icons circle-icon">
@@ -405,15 +407,15 @@
 				<p></p>
 			</div>
 			<div class="rightblock">
-				<a href="./index.html">Home</a>
-				<a href="./services.html">Marketing</a>
-				<a href="./ppc.html">PPC</a>
+				<a href="./services.html">Enterprise</a>
+				<a style="display: none;" href="./ppc.html">PPC</a>
 				<a class="yellow_link visible_link" href="./dsp.html">Self-Serve Ad Platform</a>
 				<a class="yellow_link visible_link" href="./service.html">Terms of Service</a>
 				<a class="yellow_link visible_link" href="./content.html">Content Policy</a>
 				<a href="./about.html">About Us</a>
 				<a href="./events.html">Events</a>
 				<a href="./careers.html">Careers</a>
+				<a href="./blog.html">Blog</a>
 				<a href="./contact.html">Contact</a>
 				<a href="./policy.html">Privacy Policy</a>
 				<a href="./terms.html">Terms & Conditions</a>
