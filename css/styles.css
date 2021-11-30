@@ -1594,6 +1594,11 @@ margin: 0;
     box-shadow: 0 15px 20px -4px #00B553;
 }
 
+.dps .green:hover {
+    box-shadow: 0 0px 20px -4px #00B553;
+}
+
+
 .dps .last{
 	text-transform: inherit;
 	padding-bottom: 70px;
