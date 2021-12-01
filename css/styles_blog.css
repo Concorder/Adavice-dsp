@@ -70,8 +70,9 @@ header.blog_header .menu-text, .menu-text:visited{
 	margin-right: auto !important;
 	text-align: center;
 	font-size: 18px;
-	font-weight: normal;
+	font-weight: 600;
 	color: var(--main-color);
+	text-transform: uppercase;
 }
 
 header.blog_header .blog_submenu{
@@ -99,6 +100,7 @@ header.blog_header .desk-menu li{
 
 header.blog_header .desk-menu a{
 	font-weight: 600;
+	text-transform: uppercase;
 }
 
 header.blog_header .social a:first-child{
@@ -457,12 +459,11 @@ footer.blog_footer .social {
 
 .blog_updates .article_title{
 	padding: 10px 22px 10px 22px;
-	width: 50%;
+	width: 70%;
 }
 
-
 .blog_updates .article_tag{
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -717,17 +718,8 @@ footer.blog_footer .social {
 
 .blog_article .article_text p{
 	font-size: 14px;
-	color: #8C8C8C;
+	color: #4d4d4d;
 	text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    line-clamp: 4;
-    box-orient: vertical;
 }
 
 .blog_article .article_tag{
@@ -950,10 +942,10 @@ footer.blog_footer .social {
 	max-width: initial !important;
 }
 
-.blog_main #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, 
-.blog_main #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{
-	width: 550px !important;
-	margin: auto !important;
+.blog_main #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .tag{
