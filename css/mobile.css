@@ -1002,3 +1002,15 @@ text-align: center;
 		width: 250px;
 	}
 }
+
+@media screen and (max-width: 1281px){
+	#company::after,
+	#services::after{
+		top: -3px;
+	}
+
+	#company:hover::after,
+    #services:hover::after{
+ 	    top: 3px;
+    }
+}

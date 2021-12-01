@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     /*$(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
 
@@ -7,17 +7,17 @@ $(document).ready(function(){
         }, 500);
     });*/
 
-    $('#services').hover(function() {
+    $('#services').hover(function () {
         $('#services_sub').slideDown(200);
-    }, function(){
+    }, function () {
         $('#services_sub').slideUp(50);
-        });
+    });
 
-        $('#company').hover(function() {
-            $('#company_sub').slideDown(200);
-        }, function(){
-            $('#company_sub').slideUp(50);
-            });
+    $('#company').hover(function () {
+        $('#company_sub').slideDown(200);
+    }, function () {
+        $('#company_sub').slideUp(50);
+    });
 });
 
 let today = new Date();

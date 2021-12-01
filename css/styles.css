@@ -183,9 +183,7 @@ header .wrapper {
 	text-decoration: none;
 }
 
-
-
-.desk-menu > li.active:after {
+.desk-menu > li.active:before {
 	content: '';
     position: absolute;
     bottom: 0;
@@ -1871,4 +1869,31 @@ margin-bottom: 15px;
 	height: 100%;
     padding-top: 11px;
     padding-right: 8px;
+}
+
+#company::after,
+#services::after{
+	border: 2px solid var(--main-color);;
+    border-left-color: transparent;
+    border-top-color: transparent;
+	top: -6px;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+	content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    left: 5px;
+    transition: all .3s ease-out;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+#company:hover::after,
+#services:hover::after{
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+ 	top: -1px;
 }
