@@ -304,10 +304,6 @@
 		margin-top: 55px;
 	}
 
-    .blog_article .article_block{
-        margin-left: 50px;
-    }
-
     .blog_article .hero.body_article .text_block{
         margin-left: auto;
         margin-right: auto;
@@ -366,7 +362,7 @@
 		color: #10345A;
 	}
 
-	.blog_article .hero.title_article{
+	.blog_article .hero.body_article{
         padding: 94px 0 0px;
     }
 }
@@ -490,9 +486,9 @@
         display: block;
     }
 
-    .blog_article .hero.title_article{
-        padding: 25px 0 1px;
-    }
+	.blog_article .hero.body_article {
+		padding: 25px 0 0px;
+	}
 
     .blog_article .hero.related .article_container{
         width: 100%;
