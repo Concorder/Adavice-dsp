@@ -143,8 +143,10 @@
 		margin-bottom: 24px;
 	}
 
-	.blog .article_image > img{
+	.blog .article_image,
+	.hero .inline_block .article_image{
 		height: 220px;
+		width: 100%;
 	}
 
 	.blog a.article_link{
@@ -263,6 +265,9 @@
 
     .blog_article .second_version{
         display: block;
+		height: 400px;
+		background-size: cover;
+		background-position: center center;
     }
 
 	.blog_article .hero.body_article {
@@ -285,8 +290,6 @@
 	.blog_article .hero h1{
 		padding-bottom: 15px;
 	}
-						
-    /*проверенно*/
 
 	.blog_article .article_block_right .rates_block .share_article, 
 	.blog_article .article_block_right .rates_block .rate_article{
@@ -303,76 +306,6 @@
 
 	.blog_article .hero.body_article .container{
 		margin-top: 0px;
-	}
-}
-
-@media (max-width: 700px){
-	.blog_main .hero.subscribe, 
-	.blog_main .hero.subscribe .container {
-		height: max-content;
-	}
-
-	.blog_main .hero.subscribe h2{
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 36px;
-	}
-
-	.blog_main .hero.subscribe p{
-		text-align: center;
-	}
-
-	.blog_main .hero.subscribe form{
-		flex-direction: column;
-	}
-
-	.blog_main #form_for_subscribe input[type="email"],
-	.blog_main .hero.subscribe .subscribe_button
-	{
-		width: 100%;
-		margin: auto;
-	}
-
-	.blog_main .hero.subscribe .subscribe_button{
-		margin-top: 25px;
-	}
-}
-
-@media (max-width: 700px){
-	.blog_article .hero.subscribe{
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
-
-	.blog_article .hero.subscribe, .blog_article .hero.subscribe .container {
-		height: max-content;
-	}
-
-	.blog_article .hero.subscribe h2{
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 36px;
-	}
-
-	.blog_article .hero.subscribe p{
-		text-align: center;
-	}
-
-	.blog_article .hero.subscribe form{
-		flex-direction: column;
-	}
-
-	.blog_article #form_for_subscribe input[type="email"],
-	.blog_article .hero.subscribe .subscribe_button
-	{
-		width: 100%;
-		margin: auto;
-	}
-
-	.blog_article .hero.subscribe .subscribe_button{
-		margin-top: 25px;
 	}
 }
 
