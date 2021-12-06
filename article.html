@@ -804,7 +804,7 @@
 				</div>
 				<ul class="menu-items-container">
 					<li>
-						<a href="#">
+						<a href="./insights.html">
 							<span class="menu-text">Insights</span>
 							<div class="bottom-border"></div>
 						</a>
@@ -844,7 +844,7 @@
 		<div class="blog_submenu">
 			<div class="wrapper">
 				<ul class="desk-menu">
-					<li><a href="#">Insights</a></li>
+					<li><a href="./insights.html">Insights</a></li>
 					<li class="active"><a href="./updates.html">Updates</a></li>
 					<li><a href="#">Case studies</a></li>
 					<li><a href="#">Help Station</a></li>
@@ -1217,7 +1217,7 @@
 			</div>
 			<div class="rightblock block_footer">
 				<a href="./blog.html" class="green_link">Adavice Blog</a>
-				<a href="#">Insights</a>
+				<a href="./insights.html">Insights</a>
 				<a href="./updates.html">Updates</a>
 				<a href="#">Case Studies</a>
 				<a href="#">Help Station</a>
@@ -1250,39 +1250,8 @@
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="./js/script.js"></script>
-	<script src="./js/popup.js"></script>
 	<script src="./js/mob_menu.js"></script>
 	<script src="./js/blog_script.js"></script>
-	<script src="./js/for_header.js"></script>
-	<script>
-		$('#form2').on('submit', function () {
-			var formData = {
-				'name': $('#name').val(),
-				'email': $('#email').val(),
-				'phone': $('#phone').val(),
-				'company': $('#company').val(),
-				'interested': $('#interested').val(),
-				'message': $('#message').val(),
-			};
-			$('#form2').prop('disabled', true);
-			window.dataLayer = window.dataLayer || [];
-			window.dataLayer.push({ 'event': 'send_form_talk_to_us' });
-			$.ajax({
-				type: 'POST',
-				url: '/c/contact_form',
-				data: formData,
-				encode: true,
-				success: function (data) {
-					window.location.replace("./submitted.html");
-				},
-				error: function (XMLHttpRequest, textStatus, errorThrown) {
-					alert("Something is wrong.");
-				}
-			});
-			return false;
-		});
-
-	</script>
 </body>
 
 </html>
