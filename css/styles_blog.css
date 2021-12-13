@@ -130,6 +130,10 @@ a.article_link{
 	height: fit-content;
 }
 
+.blog .article_image{
+	height: 100%;
+}
+
 .blog .hero.first_block{
 	padding: 166px 0 0px;
 }
@@ -140,30 +144,28 @@ a.article_link{
 	margin-right: auto;
 }
 
-.inline_block a.article_link{
+.inline_block .article_container{
 	width: 40%;
-	margin: 0px 21px 55px 21px;
+	margin: 0px 21px 0px 21px;
+	margin-bottom: 55px !important;
 }
 
-.hero .inline_block a.article_link:first-child,
-.hero .inline_block a.article_link:last-child{
+.hero .inline_block .article_container:first-child,
+.hero .inline_block .article_container:last-child{
 	margin-left: 0px;
 	margin-right: 0px;
 }
 
 .hero .inline_block .article_container{
-	height: 420px;
+	height: 100%;
 	flex-direction: column;
 	margin-bottom: 0px;
 	border: 1px solid #F0F0F0;
 }
 
 .hero .inline_block .article_image {
-    height: 40%;
 	width: 100%;
 	margin-bottom: auto;
-	background-size: cover;
-	background-position: center center;
 }
 
 .hero .inline_block .block_border{
@@ -181,12 +183,8 @@ a.article_link{
 }
 
 .hero .inline_block .article_title{
-	padding: 17px 14px 0px 14px;
+	padding: 10px 14px 0px 14px;
 	width: 100%;
-}
-
-.hero .inline_block .article_block h3{
-	font-size: 21px;
 }
 
 .hero .inline_block .article_text{
@@ -231,7 +229,7 @@ a.article_link{
 }
 
 .blog .article_container{
-	height: 220px;
+	height: 270px;
 	border: 1px solid #F0F0F0;
 	display: flex;
 	margin-bottom: 43px;
@@ -246,12 +244,6 @@ a.article_link:visited {
 
 .article_container:hover{
 	box-shadow: 2px 4px 18px rgb(140 140 140 / 21%);
-}
-
-.blog .article_image{
-	width: 30%;
-	background-size: cover;
-	background-position: center center;
 }
 
 .min_read{
@@ -275,18 +267,20 @@ a.article_link:visited {
 	width: 100%;
 	display: flex;
 	height: fit-content;
+	flex-wrap: wrap;
 }
 
 .blog .article_title{
-	padding: 22px;
-	width: 70%;
+	padding: 22px 22px 0px 22px;
+	width: 100%;
 }
 
 .blog .article_tag{
-    width: 30%;
+    width: fit-content;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+	padding: 15px 0px 10px 22px;
 }
 
 .blog .article_tag .tag{
@@ -310,6 +304,26 @@ a.article_link:visited {
 	text-transform: inherit;
 	font-weight: 600;
 	text-align: left;
+	/*overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;8*/
+}
+
+.blog .article_text{
+	padding: 0px 22px 0px 22px;
+	height: fit-content;
+}
+
+.blog .article_text p {
+	font-size: 15px;
+	color: #8C8C8C;
+	text-align: left;
 	overflow: hidden;
     text-overflow: ellipsis;
     display: -moz-box;
@@ -321,24 +335,15 @@ a.article_link:visited {
     box-orient: vertical;
 }
 
-.blog .article_text{
-	padding: 0px 22px 0px 22px;
-	width: 95%;
-	height: fit-content;
-}
-
-.blog .article_text p {
-	font-size: 14px;
-	color: #8C8C8C;
-	text-align: left;
+.hero .inline_block p{
 	overflow: hidden;
     text-overflow: ellipsis;
     display: -moz-box;
     -moz-box-orient: vertical;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    line-clamp: 4;
+    line-clamp: 3;
     box-orient: vertical;
 }
 
@@ -436,8 +441,6 @@ footer.blog_footer .social {
 .blog_article .article_image{
 	margin-bottom: 35px;
 	width: 100%;
-	background-size: cover;
-    background-position: center center;
 }
 
 .blog_article .article_block_right .article_tag .tag{
@@ -479,6 +482,7 @@ footer.blog_footer .social {
 	flex-wrap: wrap;
 	padding-bottom: 20px;
 	width: 100%;
+	padding-left: 0px;
 }
 
 .blog_article .body_article .text_block{
@@ -498,7 +502,7 @@ footer.blog_footer .social {
 .blog_article .article_block_left .tag_container{
 	margin-top: 35px;
 	border: 1px solid #F0F0F0;
-	padding: 35px 25px 19px 25px;
+	padding: 25px;
 	height: fit-content;
 }
 
@@ -603,7 +607,7 @@ footer.blog_footer .social {
 
 .article_block_right h3{
 	text-align: left;
-	padding-bottom: 15px;
+	padding: 20px 0 15px 0;
 }
 
 .article_block_right ol,
@@ -615,3 +619,25 @@ footer.blog_footer .social {
     padding-left: 40px;
 	padding-bottom: 35px;
 }
+
+.preview_image{
+	width: inherit;
+	height: 100%;
+}
+
+.inline_block .preview_image{
+	height: auto;
+}
+
+.blog.blog_article .article_image{
+	height: auto;
+}
+
+.article_container.subscribe_container.second_version{
+	border: none;
+	padding-bottom: 0px;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+

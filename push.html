@@ -92,8 +92,9 @@
 		}
 
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper {
-			background-color: #f6f6f6;
-			background-image: url(https://bucket.mlcdn.com/a/3522/3522497/images/c07166cdd0dc0fdb1f7b73218cc5972e15102ead.png);
+			background-color: #f0ad1c87;
+			background-image: url(./img/form_background.jpg);
+			background-blend-mode: screen;
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -774,6 +775,23 @@
 			}
 		}
 	</style>
+	<style type="text/css">
+		.article_container.subscribe_container.second_version #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+			max-width: inherit;
+		}
+
+		.article_container.subscribe_container.second_version #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+			width: 50%;
+			margin: auto;
+		}
+
+		@media (max-width: 551px) {
+			.article_container.subscribe_container.second_version #mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+				width: 90%;
+
+			}
+		}
+	</style>
 </head>
 
 <body class="blog blog_article">
@@ -967,65 +985,6 @@
 							or web push.
 						</p>
 
-						<div class="subscribe_container second_version">
-							<div id="mlb2-4978340"
-								class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4978340">
-								<div class="ml-form-align-center">
-									<div class="ml-form-embedWrapper embedForm">
-										<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-											<div class="ml-form-embedContent" style="">
-												<h4>Don't Miss a Post</h4>
-												<p><span style="font-size:24px">Subscribe to receive the most&nbsp;fresh
-														updates&nbsp;</span></p>
-												<p><span style="font-size:24px"></span></p>
-											</div>
-											<form class="ml-block-form"
-												action="https://static.mailerlite.com/webforms/submit/n7e4d8"
-												data-code="n7e4d8" method="post" target="_blank">
-												<div class="ml-form-formContent">
-													<div class="ml-form-fieldRow ml-last-item">
-														<div
-															class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-															<input aria-label="email" aria-required="true" type="email"
-																class="form-control" data-inputmask=""
-																name="fields[email]" placeholder="Email"
-																autocomplete="email">
-														</div>
-													</div>
-												</div>
-												<input type="hidden" name="ml-submit" value="1">
-												<div class="ml-form-embedSubmit">
-													<button type="submit" class="primary">Subscribe</button>
-													<button disabled="disabled" style="display:none" type="button"
-														class="loading">
-														<div class="ml-form-embedSubmitLoad"></div> <span
-															class="sr-only">Loading...</span>
-													</button>
-												</div>
-												<input type="hidden" name="anticsrf" value="true">
-											</form>
-										</div>
-										<div class="ml-form-successBody row-success" style="display:none">
-											<div class="ml-form-successContent">
-												<h4>Thank you!</h4>
-												<p>You have successfully joined our subscriber list.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<script>
-								function ml_webform_success_4978340() { var r = ml_jQuery || jQuery; r(".ml-subscribe-form-4978340 .row-success").show(), r(".ml-subscribe-form-4978340 .row-form").hide() }
-							</script>
-							<img src="https://track.mailerlite.com/webforms/o/4978340/n7e4d8?v1637936829" width="1"
-								height="1"
-								style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block"
-								alt="." border="0">
-							<script
-								src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
-								type="text/javascript"></script>
-						</div>
-
 						<p>
 							They are shown on the website page and are perfect for targeting IOS users. In contrast with
 							classic push, users don’t subscribe to receiving such notifications.
@@ -1042,8 +1001,8 @@
 
 						<p>
 							Unlike classic push that shows on the user's device screen, <b>inpage displays on a
-							visitor’s
-							web-page</b>. When scrolling online you can spot something like this:
+								visitor’s
+								web-page</b>. When scrolling online you can spot something like this:
 						</p>
 
 						<img src="./img/push_image2.png" class="inner_image" alt="Phone" />
@@ -1175,83 +1134,155 @@
 				<h2>RELATED TOPICS</h2>
 				<div class="inline_block">
 
-					<a class="article_link" href="#">
-						<div class="article_container">
-							<div class="min_read">x min read</div>
-							<div class="article_image" style="background-image: url(./img/acticle_image.jpg);">
+					<div class="article_container">
+						<div class="min_read">x min read</div>
+						<a class="article_link" href="#">
+							<div class="article_image">
+								<img src="./img/acticle_image.jpg" class="preview_image" alt=" ">
 							</div>
-							<div class="article_block">
-								<div class="block_border">
+						</a>
+						<div class="article_block">
+							<div class="block_border">
+								<a class="article_link" href="#">
 									<div class="article_title">
 										<h3>
 											Lorem ipsum dolor sit amet, consectetur
 										</h3>
 									</div>
-									<div class="article_tag">
-										<div class="main_tag tag">tag1</div>
-										<div class="tag">tag2</div>
-									</div>
+								</a>
+								<div class="article_tag">
+									<div class="main_tag tag">tag1</div>
+									<div class="tag">tag2</div>
 								</div>
-								<div class="article_text">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua
-									</p>
+							</div>
+							<div class="article_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="article_container subscribe_container second_version">
+
+						<div id="mlb2-4978340"
+							class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4978340">
+							<div class="ml-form-align-center">
+								<div class="ml-form-embedWrapper embedForm">
+									<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+										<div class="ml-form-embedContent" style="">
+											<h4>Don't Miss a Post</h4>
+											<p><span style="font-size:24px">Subscribe to receive the most&nbsp;fresh
+													updates&nbsp;</span></p>
+											<p><span style="font-size:24px"></span></p>
+										</div>
+										<form class="ml-block-form"
+											action="https://static.mailerlite.com/webforms/submit/n7e4d8"
+											data-code="n7e4d8" method="post" target="_blank">
+											<div class="ml-form-formContent">
+												<div class="ml-form-fieldRow ml-last-item">
+													<div
+														class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+														<input aria-label="email" aria-required="true" type="email"
+															class="form-control" data-inputmask="" name="fields[email]"
+															placeholder="Email" autocomplete="email"
+															aria-invalid="false">
+													</div>
+												</div>
+											</div>
+											<input type="hidden" name="ml-submit" value="1" aria-invalid="false">
+											<div class="ml-form-embedSubmit">
+												<button type="submit" class="primary">Subscribe</button>
+												<button disabled="disabled" style="display:none" type="button"
+													class="loading">
+													<div class="ml-form-embedSubmitLoad"></div> <span
+														class="sr-only">Loading...</span>
+												</button>
+											</div>
+											<input type="hidden" name="anticsrf" value="true" aria-invalid="false">
+										</form>
+									</div>
+									<div class="ml-form-successBody row-success" style="display:none">
+										<div class="ml-form-successContent">
+											<h4>Thank you!</h4>
+											<p>You have successfully joined our subscriber list.</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</a>
-					<a class="article_link" href="#">
-						<div class="article_container">
-							<div class="min_read">x min read</div>
-							<div class="article_image" style="background-image: url(./img/acticle_image.jpg);">
+						<script>
+							function ml_webform_success_4978340() { var r = ml_jQuery || jQuery; r(".ml-subscribe-form-4978340 .row-success").show(), r(".ml-subscribe-form-4978340 .row-form").hide() }
+						</script>
+						<img src="https://track.mailerlite.com/webforms/o/4978340/n7e4d8?v1637936829" width="1"
+							height="1"
+							style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block"
+							alt="." border="0">
+						<script
+							src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
+							type="text/javascript"></script>
+					</div>
+
+					<div class="article_container">
+						<div class="min_read">x min read</div>
+						<a class="article_link" href="#">
+							<div class="article_image">
+								<img src="./img/acticle_image.jpg" class="preview_image" alt=" ">
 							</div>
-							<div class="article_block">
-								<div class="block_border">
+						</a>
+						<div class="article_block">
+							<div class="block_border">
+								<a class="article_link" href="#">
 									<div class="article_title">
 										<h3>
 											Lorem ipsum dolor sit amet, consectetur
 										</h3>
 									</div>
-									<div class="article_tag">
-										<div class="main_tag tag">tag1</div>
-										<div class="tag">tag2</div>
-									</div>
+								</a>
+								<div class="article_tag">
+									<div class="main_tag tag">tag1</div>
+									<div class="tag">tag2</div>
 								</div>
-								<div class="article_text">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua
-									</p>
-								</div>
+							</div>
+							<div class="article_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua
+								</p>
 							</div>
 						</div>
-					</a>
-					<a class="article_link" href="#">
-						<div class="article_container">
-							<div class="min_read">x min read</div>
-							<div class="article_image" style="background-image: url(./img/acticle_image.jpg);">
+					</div>
+
+					<div class="article_container">
+						<div class="min_read">x min read</div>
+						<a class="article_link" href="#">
+							<div class="article_image">
+								<img src="./img/acticle_image.jpg" class="preview_image" alt=" ">
 							</div>
-							<div class="article_block">
-								<div class="block_border">
+						</a>
+						<div class="article_block">
+							<div class="block_border">
+								<a class="article_link" href="#">
 									<div class="article_title">
 										<h3>
 											Lorem ipsum dolor sit amet, consectetur
 										</h3>
 									</div>
-									<div class="article_tag">
-										<div class="main_tag tag">tag1</div>
-										<div class="tag">tag2</div>
-									</div>
-								</div>
-								<div class="article_text">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua
-									</p>
+								</a>
+								<div class="article_tag">
+									<div class="main_tag tag">tag1</div>
+									<div class="tag">tag2</div>
 								</div>
 							</div>
+							<div class="article_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua
+								</p>
+							</div>
 						</div>
+					</div>
 					</a>
 				</div>
 			</div>
