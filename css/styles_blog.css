@@ -492,6 +492,7 @@ footer.blog_footer .social {
 
 .blog_article .article_block_left{
 	width: 30%;
+	height: fit-content;
 }
 
 .blog_article .article_block_left .subscribe_container{
