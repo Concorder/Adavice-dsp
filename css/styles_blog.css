@@ -142,6 +142,7 @@ a.article_link{
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
+	align-items: stretch;
 }
 
 .inline_block .article_container{
@@ -157,7 +158,7 @@ a.article_link{
 }
 
 .hero .inline_block .article_container{
-	height: 100%;
+	height: auto;
 	flex-direction: column;
 	margin-bottom: 0px;
 	border: 1px solid #F0F0F0;
