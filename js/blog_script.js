@@ -9,7 +9,7 @@ window.onscroll = function () {
         }
         prevScrollpos = currentScrollPos;
     }
-    else{
+    else {
         document.querySelector(".blog_header").style.top = "0";
     }
 }
@@ -28,4 +28,14 @@ $('.share_icon_2').mouseenter(function () {
 
 $('.share_icon_2').mouseleave(function () {
     $('.share_icon_2 path').css('fill', '#8C8C8C');
+});
+
+
+$('.see_more').click(function () {
+    if ($('.more_tags').css('display') == "none") {
+        $('.more_tags').slideDown(200);
+    }
+    else{
+        $('.more_tags').slideUp(200);
+    }
 });

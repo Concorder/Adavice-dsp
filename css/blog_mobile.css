@@ -148,6 +148,10 @@
     .rate_article img{
         width: 20px;
     }
+
+	.blog_article .article_block_left .tag_container .article_tag .tag{
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 858px){

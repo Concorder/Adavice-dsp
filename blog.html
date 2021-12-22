@@ -91,9 +91,7 @@
 		}
 
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper {
-			background-color: #f0ad1c87;
-			background-image: url(./img/form_background.jpg);
-			background-blend-mode: screen;
+			background: linear-gradient(0deg, rgba(240, 173, 28, 0.5), rgba(240, 173, 28, 0.5)), url(./img/form_background.jpg);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -157,7 +155,8 @@
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
 			text-align: left;
-			margin: 0 0 20px 0
+			margin: 0 0 20px 0;
+			text-shadow: 0 0 10px rgb(0 0 0 / 50%);
 		}
 
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
@@ -737,6 +736,11 @@
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
 		#mlb2-4978340.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
 			color: red !important
+		}
+
+		.ml-form-successBody.row-success {
+			width: 320px;
+			margin: auto;
 		}
 
 		@media only screen and (max-width:400px) {
