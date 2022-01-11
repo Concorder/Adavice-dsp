@@ -252,7 +252,7 @@ a.article_link:visited {
 	font-size: 16px;
 	width: 114px;
 	height: 24px;
-	background: rgba(240, 240, 240, 0.6);
+	background: rgba(240, 240, 240, 0.75);
 	border-radius: 18px;
 	margin: 10px;
 }
@@ -294,6 +294,7 @@ a.article_link:visited {
 	float: left;
     margin-right: 10px;
 	margin-bottom: 5px;
+	text-transform: lowercase;
 }
 
 .blog .article_tag .main_tag{
@@ -692,4 +693,50 @@ header.blog_header .input_search.mob_search{
 	margin: 15px auto 15px auto;
 	background-repeat: no-repeat;
 	background-position: 97%;
+}
+
+.mini_logo{
+	height: 40px;
+    vertical-align: bottom; 
+}
+
+.article_block .block_border a.article_link{
+	width: 100%;
+}
+
+.in_article_block{
+	display: flex;
+}
+
+.in_article_block img{
+	width: 200px;
+    height: fit-content;
+    padding-right: 50px;
+}
+
+.company_link{
+	text-align: center !important;
+}
+
+ol.with_bracket{
+	list-style-type: none;
+    counter-reset:  item;
+}
+
+ol.with_bracket > li:before {
+	content: counter(item) ') ';
+	counter-increment: item;    
+	 width: 1em;
+    margin-left: -1em;
+}
+
+ul.with_dash {
+	list-style: none;
+}
+
+ul.with_dash >  li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
 }

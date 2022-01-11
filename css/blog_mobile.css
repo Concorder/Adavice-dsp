@@ -383,6 +383,14 @@
 	.blog_article .hero.body_article .text_block{
 		width: 100%;
 	}
+
+	.in_article_block{
+		display: block;
+	}
+	
+	.in_article_block img{
+		padding-right: 0px;
+	}
 }
 
 @media (max-width: 451px){
