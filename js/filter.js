@@ -32,12 +32,11 @@ function filterByTag() {
 		
 	} else {
 		sessionStorage.setItem("filterRequest", this.innerHTML);
-		window.location.pathname = 'Adavice-dsp/tags.html';
+		window.location.pathname = 'Adavice-dsp/search.html';
 	}
 }
 
 function renderResults() {
-
 		articleList.forEach(article => {
 			article.setAttribute("data-filter", "0");
 			article.querySelectorAll('.tag').forEach(tag => {
