@@ -424,7 +424,7 @@ footer a:visited {
 	transform: translate(-50%, 0);
 	width: max-content;
 }
-[class*="mob"] {
+[class*="mob"], .hidden {
     display: none !important;
 }
 /*ABOUT================================*/
