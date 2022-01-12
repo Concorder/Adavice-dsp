@@ -60,7 +60,7 @@ if (tags.length > 0) {
             
         } else {
             sessionStorage.setItem("filterRequest", this.innerHTML);
-            window.location.pathname = 'Adavice-dsp/search.html';
+            window.location.href = './search.html';
         }
     }
     
@@ -80,4 +80,3 @@ if (tags.length > 0) {
         })
     }
 }
-
