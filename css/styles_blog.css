@@ -749,6 +749,7 @@ ul.with_dash >  li:before {
     margin-left: -1em;
 }
 
-.at-share-tbx-element .at-share-btn{
-	margin: 0px 15px 0px 15px !important;
+.at-share-btn-elements{
+	display: flex;
+    justify-content: space-evenly;
 }
