@@ -67,6 +67,12 @@
 	header.blog_header .menu-close{
 		top: 13px;
 	}
+	
+	header.blog_header .search_block {
+		display: flex;
+		float: none;
+		margin: 15px auto 15px auto;
+	}
 
 	.blog_main .hero {
 		padding: 55px 0 55px;
@@ -145,8 +151,6 @@
 	.blog .article_block h3{
 		font-size: 21px;	
 	}
-
-
 
     footer.blog_footer{
 		padding-bottom: 15px !important;
