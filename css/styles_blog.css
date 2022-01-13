@@ -14,17 +14,19 @@ header.blog_header .blog_logo{
 	width: 270px;
 }
 
+header.blog_header .search_block{
+	display: inline-flex;
+	float: right;
+}
+
 header.blog_header input[type="search"]{
-    width: 198px;
+    width: 200px;
     height: 34px;
     margin-bottom: 15px;
     text-align: left;
     border: none;
     background: #F0F0F0;
-    border-radius: 5px;
-	background-image: url(../img/icons/icons_search.svg);
-    background-repeat: no-repeat;
-    background-position: 165px;
+	border-radius: 5px 0px 0px 5px;
 	float: right;
 	padding: 10px;
 }
@@ -48,6 +50,17 @@ header.blog_header input[type="search"]:active{
 header.blog_header input[type="search"]:focus::-webkit-search-cancel-button {
 	opacity: 1;
 	pointer-events: all;
+}
+
+header.blog_header button.input_search_button{
+	width: 34px;
+	height: 34px;
+	background: #F0F0F0;
+	border: none;
+	border-radius: 0px 5px 5px 0px;
+	background-image: url(../img/icons/icons_search.svg);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 header.blog_header .menu-items-container{
@@ -619,13 +632,6 @@ footer.blog_footer .social {
 	padding-bottom: 45px;
 }
 
-.blog_article .article_block_right .rates_block .share_article svg{
-	width: 24px;
-	margin-left: 15px;
-	margin-right: 15px;
-	cursor: pointer;
-}
-
 .blog_article .inline_block .article_text{
 	margin-bottom: 0px;
 }
@@ -700,16 +706,18 @@ footer.blog_footer .social {
 	margin-right: 0px !important;
 }
 
-
 header.blog_header .input_search.mob_search{
-	width: 80%;
 	float: initial;
 	display: block !important;
 	background: #ffffff;
+	margin-bottom: 0px;
+}
+
+header.blog_header .input_search_button.mob_search{
+	background: #ffffff;
 	background-image: url(../img/icons/icons_search.svg);
-	margin: 15px auto 15px auto;
-	background-repeat: no-repeat;
-	background-position: 97%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .mini_logo{
@@ -756,4 +764,9 @@ ul.with_dash >  li:before {
     content: "-";
     width: 1em;
     margin-left: -1em;
+}
+
+.at-share-btn-elements{
+	display: flex;
+    justify-content: space-evenly;
 }
