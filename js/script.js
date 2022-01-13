@@ -26,41 +26,61 @@ document.querySelector('#year').innerText = year;
 
 //filters and tags
 //if there are tags on page
-const tags = document.querySelectorAll('.tag');
+let tags = document.querySelectorAll('.tag');
+const onSearchPage = window.location.href.indexOf("search") > -1
 if (tags.length > 0) {
 	const articleList = document.querySelectorAll(".article_container");
 	let filterBase = [];
 	let filterRequest = [];
-	if (window.location.href.indexOf("search") > -1 && sessionStorage.getItem('filterRequest')) {
+	if (onSearchPage && sessionStorage.getItem('filterRequest')) {
 		filterRequest = [sessionStorage.getItem('filterRequest')];
 		renderResults();
 	}
-	
+	// building tag cloud
 	tags.forEach(tag => {
 		tag.addEventListener("click", filterByTag)
 		if (filterBase.indexOf(tag.innerHTML) < 0) {
 			filterBase.push(tag.innerHTML)
 		}
 	});
-	
 	console.log(filterBase)
-	tagPool = document.querySelector(".tag_container.pool")
+	tagPool = document.querySelector(".tag_pool")
+	addTag("all")
 	filterBase.forEach(el => {
 		addTag(el)
-	})
+	});
+
+	tags = document.querySelectorAll('.tag');
 	
 	function addTag(el) {
 		let newTag = document.createElement("a");
 		newTag.innerText = el;
 		newTag.classList.add("tag");
+		newTag.addEventListener("click", filterByTag)
 		tagPool.appendChild(newTag);
+		if (el == sessionStorage.getItem('filterRequest')){
+			newTag.classList.add("active");
+		}
 	}
-	
+
 	function filterByTag() {
-		if (window.location.href.indexOf("search") > -1) {
+		if (onSearchPage) {
 			sessionStorage.setItem('filterRequest', '')
-			filterRequest = []
-			this.classList.toggle("active");
+			filterRequest = [];
+			if (this.innerHTML === "all") {
+				tags.forEach(tag=>{
+					tag.classList.remove("active")
+				})
+				this.classList.add("active")
+				renderResults()
+			 return true
+			}
+			tags[0].classList.remove("active")
+			tags.forEach(tag=>{
+				if (tag.innerHTML === this.innerHTML){
+					tag.classList.toggle("active")
+				}
+			})
 			document.querySelectorAll(".tag.active").forEach(tag => {
 				if (filterRequest.indexOf(tag.innerHTML) < 0) {
 					filterRequest.push(tag.innerHTML);
@@ -76,19 +96,33 @@ if (tags.length > 0) {
 	}
 	
 	function renderResults() {
-		document.querySelector(".first_block h2").innerText = filterRequest
+		const searchHeading = document.querySelector(".first_block h2");
+		let shownCounter = 0;
+		let tagsToDisplay = ""
+		filterRequest.forEach(tag => {
+			tagsToDisplay = tagsToDisplay + "#" + tag + " "
+		})
+		
+		searchHeading.innerText = tagsToDisplay
 		articleList.forEach(article => {
 			article.setAttribute("data-filter", "0");
 			article.querySelectorAll('.tag').forEach(tag => {
 				if (filterRequest.indexOf(tag.innerHTML) !== -1 || article.getAttribute("data-filter") === "1") {
 					article.setAttribute("data-filter", "1");
 					article.classList.remove("hidden")
+					shownCounter++
 				} else {
 					tag.setAttribute("data-filter", "0")
 					article.classList.add("hidden")
 				}
 			});
 		})
+		if (shownCounter === 0) {
+			articleList.forEach(article => {
+				article.classList.remove("hidden");
+				searchHeading.innerText = "All"
+			})
+		}
 	}
 }
 

@@ -163,6 +163,15 @@ a.article_link{
 	margin-bottom: 0px;
 	border: 1px solid #F0F0F0;
 }
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.searchHeader {
+	clear: both;
+	margin-top: 60px;
+}
 
 .hero .inline_block .article_image {
 	width: 100%;
@@ -284,7 +293,7 @@ a.article_link:visited {
 	padding: 15px 0px 10px 22px;
 }
 
-.blog .article_tag .tag{
+.blog .article_tag .tag, .tag_pool .tag{
 	font-size: 14px;
 	background: #F0F0F0;
 	padding: 7px 17px 7px 17px;
@@ -295,6 +304,14 @@ a.article_link:visited {
     margin-right: 10px;
 	margin-bottom: 5px;
 	text-transform: lowercase;
+}
+.tag_pool .tag.active {
+	background: #F0AD1C;
+}
+tag_pool:after{
+	content: "";
+	display: table;
+
 }
 
 .blog .article_tag .main_tag{
