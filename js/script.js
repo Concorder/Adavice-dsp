@@ -1,11 +1,4 @@
 $(document).ready(function () {
-	/*$(document).on('click', 'a[href^="#"]', function (event) {
-		event.preventDefault();
-
-		$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top
-		}, 500);
-	});*/
 	
 	$('#services').hover(function () {
 		$('#services_sub').slideDown(200);
@@ -24,33 +17,37 @@ let today = new Date();
 let year = today.getFullYear();
 document.querySelector('#year').innerText = year;
 
-//filters and tags
 //if there are tags on page
 let tags = document.querySelectorAll('.tag');
 const onSearchPage = window.location.href.indexOf("search") > -1
-if (tags.length > 0) {
+if (tags.length > 0 || document.querySelector('.input_search')) {
 	const articleList = document.querySelectorAll(".article_container");
 	let filterBase = [];
 	let filterRequest = [];
-	if (onSearchPage && sessionStorage.getItem('filterRequest')) {
-		filterRequest = [sessionStorage.getItem('filterRequest')];
-		renderResults();
-	}
-	// building tag cloud
+	let filterType = "";
 	tags.forEach(tag => {
 		tag.addEventListener("click", filterByTag)
 		if (filterBase.indexOf(tag.innerHTML) < 0) {
 			filterBase.push(tag.innerHTML)
 		}
 	});
-	console.log(filterBase)
-	tagPool = document.querySelector(".tag_pool")
-	addTag("all")
-	filterBase.forEach(el => {
-		addTag(el)
-	});
-
-	tags = document.querySelectorAll('.tag');
+	if (onSearchPage && sessionStorage.getItem('filterRequest')) {
+		filterType = [sessionStorage.getItem('filterType')];
+		filterRequest = [sessionStorage.getItem('filterRequest')];
+		renderResults();
+	}
+	
+	if (onSearchPage) {
+		// building tag cloud
+		console.log(filterBase)
+		tagPool = document.querySelector(".tag_pool")
+		addTag("all")
+		filterBase.forEach(el => {
+			addTag(el)
+		});
+		tags = document.querySelectorAll('.tag');
+		cloudTags = document.querySelectorAll('.tag_pool .tag')
+	}
 	
 	function addTag(el) {
 		let newTag = document.createElement("a");
@@ -58,26 +55,27 @@ if (tags.length > 0) {
 		newTag.classList.add("tag");
 		newTag.addEventListener("click", filterByTag)
 		tagPool.appendChild(newTag);
-		if (el == sessionStorage.getItem('filterRequest')){
+		if (el === sessionStorage.getItem('filterRequest')) {
 			newTag.classList.add("active");
 		}
 	}
-
+	
 	function filterByTag() {
+		filterType = "byTag";
 		if (onSearchPage) {
 			sessionStorage.setItem('filterRequest', '')
 			filterRequest = [];
 			if (this.innerHTML === "all") {
-				tags.forEach(tag=>{
+				cloudTags.forEach(tag => {
 					tag.classList.remove("active")
 				})
 				this.classList.add("active")
 				renderResults()
-			 return true
+				return true
 			}
-			tags[0].classList.remove("active")
-			tags.forEach(tag=>{
-				if (tag.innerHTML === this.innerHTML){
+			cloudTags[0].classList.remove("active")
+			cloudTags.forEach(tag => {
+				if (tag.innerHTML === this.innerHTML) {
 					tag.classList.toggle("active")
 				}
 			})
@@ -85,25 +83,41 @@ if (tags.length > 0) {
 				if (filterRequest.indexOf(tag.innerHTML) < 0) {
 					filterRequest.push(tag.innerHTML);
 				}
-				
 			});
-			console.log(filterRequest)
-			renderResults();
+			renderResults(filterType);
 		} else {
 			sessionStorage.setItem("filterRequest", this.innerHTML);
+			sessionStorage.setItem("filterType", "byTag")
 			window.location.pathname = 'Adavice-dsp/search.html';
 		}
 	}
 	
-	function renderResults() {
+	function searchByInput() {
+		event.preventDefault()
+		filterType = "search"
+		let searchInput = document.querySelector('.input_search').value;
+		filterRequest = [searchInput];
+		if (onSearchPage) {
+			sessionStorage.setItem('filterRequest', '')
+			renderResults(filterType)
+		}
+	}
+	
+	function renderResults(type) {
+		console.log(filterRequest)
 		const searchHeading = document.querySelector(".first_block h2");
 		let shownCounter = 0;
 		let tagsToDisplay = ""
-		filterRequest.forEach(tag => {
-			tagsToDisplay = tagsToDisplay + "#" + tag + " "
-		})
+		if (type === "byTag") {
+			filterRequest.forEach(tag => {
+				tagsToDisplay = tagsToDisplay + "#" + tag + " "
+			})
+			searchHeading.innerText = tagsToDisplay
+		}
+		if (type ==="search"){
+			searchHeading.innerText = "Results for: " + filterRequest
+		}
 		
-		searchHeading.innerText = tagsToDisplay
 		articleList.forEach(article => {
 			article.setAttribute("data-filter", "0");
 			article.querySelectorAll('.tag').forEach(tag => {
@@ -111,17 +125,32 @@ if (tags.length > 0) {
 					article.setAttribute("data-filter", "1");
 					article.classList.remove("hidden")
 					shownCounter++
+				} else if (type === "search") {
+					article.querySelectorAll('h3').forEach(heading => {
+						if (heading.innerHTML.toLowerCase().indexOf(filterRequest) !== -1 || tag.innerHTML.indexOf(filterRequest) !== -1) {
+							article.classList.remove("hidden");
+							
+							shownCounter++
+						} else {
+							tag.setAttribute("data-filter", "0")
+							article.classList.add("hidden")
+						}
+					})
 				} else {
 					tag.setAttribute("data-filter", "0")
 					article.classList.add("hidden")
+		
 				}
 			});
 		})
-		if (shownCounter === 0) {
+		if (shownCounter === 0 && type !== "search") {
 			articleList.forEach(article => {
 				article.classList.remove("hidden");
 				searchHeading.innerText = "All"
 			})
+		}
+		if (shownCounter === 0 && type === "search"){
+			searchHeading.innerText = 'No results found for "' + filterRequest + '"'
 		}
 	}
 }
