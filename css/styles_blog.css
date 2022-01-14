@@ -176,14 +176,16 @@ a.article_link{
 	margin-bottom: 0px;
 	border: 1px solid #F0F0F0;
 }
+
 .clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
 }
+
 .searchHeader {
 	clear: both;
-	padding-top: 55px;
+	padding-top: 30px;
 	font-size: 30px;
 }
 
