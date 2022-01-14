@@ -21,6 +21,7 @@ document.querySelector('#year').innerText = year;
 let tags = document.querySelectorAll('.tag');
 const onSearchPage = window.location.href.indexOf("search") > -1
 if (tags.length > 0 || document.querySelector('.input_search')) {
+	let searchButton = document.querySelector('.input_search_button').addEventListener('click', searchByInput)
 	const articleList = document.querySelectorAll(".article_container");
 	let filterBase = [];
 	let filterRequest = [];
@@ -32,9 +33,9 @@ if (tags.length > 0 || document.querySelector('.input_search')) {
 		}
 	});
 	if (onSearchPage && sessionStorage.getItem('filterRequest')) {
-		filterType = [sessionStorage.getItem('filterType')];
+		filterType = sessionStorage.getItem('filterType');
 		filterRequest = [sessionStorage.getItem('filterRequest')];
-		renderResults();
+		renderResults(filterType);
 	}
 	
 	if (onSearchPage) {
@@ -93,6 +94,7 @@ if (tags.length > 0 || document.querySelector('.input_search')) {
 	}
 	
 	function searchByInput() {
+		
 		event.preventDefault()
 		filterType = "search"
 		let searchInput = document.querySelector('.input_search').value;
@@ -100,6 +102,10 @@ if (tags.length > 0 || document.querySelector('.input_search')) {
 		if (onSearchPage) {
 			sessionStorage.setItem('filterRequest', '')
 			renderResults(filterType)
+		} else {
+			sessionStorage.setItem('filterRequest', searchInput);
+			sessionStorage.setItem("filterType", "search")
+			window.location.pathname = 'Adavice-dsp/search.html';
 		}
 	}
 	
