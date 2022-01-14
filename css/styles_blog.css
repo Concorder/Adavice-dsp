@@ -183,7 +183,8 @@ a.article_link{
 }
 .searchHeader {
 	clear: both;
-	margin-top: 60px;
+	padding-top: 55px;
+	font-size: 30px;
 }
 
 .hero .inline_block .article_image {
