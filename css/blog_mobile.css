@@ -170,6 +170,11 @@
 	.blog_article .article_block_left .tag_container .article_tag .tag{
 		width: 100%;
 	}
+
+	.blog_article .star{
+		font-size: 30px;
+		line-height: 1;
+	}
 }
 
 @media screen and (max-width: 858px){
@@ -418,6 +423,10 @@
 		border-bottom: none;
 	}
 
+	.blog_article .star{
+		font-size: 35px;
+		line-height: 0.7;
+	}
 }
 
 @media (max-width: 390px){
