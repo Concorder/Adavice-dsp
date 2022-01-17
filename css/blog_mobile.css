@@ -38,6 +38,12 @@
 	}
 }
 
+@media (max-width: 1021px) and (min-width: 981px){
+	footer.blog_footer .wrapper{
+		min-width: auto;
+	}
+}
+
 @media (max-width: 980px){
 	header.blog_header{
 		height: 75px;	
