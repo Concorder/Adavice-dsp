@@ -859,3 +859,7 @@ ul.with_dash >  li:before {
 	transition: 1s ease-out;
 	color: #ffd700;
 }
+
+.blog.blog_section.blog_search .hero.first_block{
+	min-height: 900px;
+}
