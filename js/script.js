@@ -20,8 +20,8 @@ document.querySelector('#year').innerText = year;
 //if there are tags on page
 let tags = document.querySelectorAll('.tag');
 const onSearchPage = window.location.href.indexOf("search") > -1
-if (tags.length > 0 || document.querySelector('.input_search')) {
-	let searchButton = document.querySelector('.input_search_button').addEventListener('click', searchByInput)
+if (tags.length > 0 || document.queryAllSelector('.input_search')) {
+	let searchButton = document.queryAllSelector('.input_search_button').addEventListener('click', searchByInput)
 	const articleList = document.querySelectorAll(".article_container");
 	let filterBase = [];
 	let filterRequest = [];
@@ -97,7 +97,7 @@ if (tags.length > 0 || document.querySelector('.input_search')) {
 		
 		event.preventDefault()
 		filterType = "search"
-		let searchInput = document.querySelector('.input_search').value;
+		let searchInput = document.queryAllSelector('.input_search').value;
 		filterRequest = [searchInput];
 		if (onSearchPage) {
 			sessionStorage.setItem('filterRequest', '')
