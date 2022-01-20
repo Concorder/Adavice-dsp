@@ -66,7 +66,7 @@ header.blog_header button.input_search_button{
 header.blog_header .menu-items-container{
 	background-color: #F0F0F0;
     width: 100%;
-    top: 264px;
+    top: 237px;
 	box-shadow: none !important;
 	height: fit-content;
 	padding-top: 20px;
@@ -863,3 +863,24 @@ ul.with_dash >  li:before {
 .blog.blog_section.blog_search .hero.first_block{
 	min-height: 900px;
 }
+
+table,
+tr,
+td {
+  border: 1.5px solid var(--main-color);
+  border-collapse: collapse;
+}
+
+.div-for-table{
+  padding-bottom: 35px;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	text-align: left;
+	padding: 10px;
+}
+

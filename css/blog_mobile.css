@@ -448,3 +448,25 @@
         margin-top: 5px;
     }
 }
+
+@media screen and (max-width: 900px){
+    table tr td{
+       font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    table tr td{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .div-for-table{
+       width: 350px;
+       overflow: auto;
+       display: block;
+       border: 2px solid var(--main-color);
+       margin: 0;
+    }
+}
