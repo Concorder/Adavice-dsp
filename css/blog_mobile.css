@@ -460,13 +460,3 @@
         font-size: 15px;
     }
 }
-
-@media screen and (max-width: 500px){
-    .div-for-table{
-       width: 350px;
-       overflow: auto;
-       display: block;
-       border: 2px solid var(--main-color);
-       margin: 0;
-    }
-}
