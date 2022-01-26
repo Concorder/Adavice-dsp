@@ -884,3 +884,7 @@ td {
 	padding: 10px;
 }
 
+.blog.blog_section.blog_search .article_tag .tag:nth-child(n+3){
+	display: none
+}
+
