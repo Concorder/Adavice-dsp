@@ -882,9 +882,20 @@ table {
 td {
 	text-align: left;
 	padding: 10px;
+	font-size: 12px;
 }
 
 .blog.blog_section.blog_search .article_tag .tag:nth-child(n+3){
 	display: none
 }
 
+.blog.blog_article .article_block_right p a,
+.blog.blog_article .article_block_right li a{
+	color: var(--highlight);
+	font-weight: 700;
+}
+
+.blog.blog_article .article_block_right p a:visited,
+.blog.blog_article .article_block_right li a:visited{
+	color: #f26323;
+}

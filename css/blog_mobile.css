@@ -449,25 +449,12 @@
     }
 }
 
-@media screen and (max-width: 900px){
-    table tr td{
-       font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 760px){
-    table tr td{
-        font-size: 15px;
-    }
-}
-
 @media screen and (max-width: 2400px){
     .div-for-table {
         display: block;
         width: 650px;
         margin: auto auto 35px auto;
-        overflow-x: scroll;
-        border: 1.5px solid var(--main-color);
+        overflow-x: auto;
     }
 }
 
