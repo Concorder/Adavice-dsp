@@ -544,6 +544,7 @@ footer.blog_footer .social {
 
 .blog_article .article_block_left .tag_container{
 	margin-top: 35px;
+	margin-bottom: 35px;
 	border: 1px solid #F0F0F0;
 	padding: 25px;
 	height: fit-content;
@@ -862,6 +863,13 @@ ul.with_dash >  li:before {
 
 .blog.blog_section.blog_search .hero.first_block{
 	min-height: 900px;
+}
+
+.div-for-table {
+	display: block;
+	width: 650px;
+	margin: auto auto 35px auto;
+	overflow-x: auto;
 }
 
 table,
