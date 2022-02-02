@@ -137,7 +137,7 @@ if (tags.length > 0 || searchForm.length > 0) {
 				tag.classList.remove("active")
 			})
 			cloudTags.forEach(tag => {
-				if (tag.innerText==filterRequest && tag.innerText != "All"){
+				if (tag.innerText==filterRequest){
 					tag.classList.add("active")
 				}
 				
