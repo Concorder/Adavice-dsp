@@ -40,6 +40,31 @@ $('.see_more').click(function () {
     }
 });
 
+$(document).ready(function () {
+    $('.pool_link').click(function () {
+        if ($('.tag_pool').css('height') == '135px') {
+            $('.tag_pool').css('height', 'fit-content');
+            $(".pool_link").html("See less");
+            return false;
+        }
+        else {
+            $('.tag_pool').css('height', '135px');
+            $(".pool_link").html("See more");
+            return false;
+        }
+    });
+});
+
+$(window).resize(function () {
+    if ($(window).width() <= 760) {
+        $('.tag_pool').css('height', '135px');
+        $(".pool_link").html("See more");
+    }
+    if ($(window).width() > 760) {
+        $('.tag_pool').css('height', 'fit-content');
+    }
+});
+
 var starClicked = false;
 
 $(function () {

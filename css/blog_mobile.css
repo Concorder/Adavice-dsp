@@ -461,6 +461,17 @@
     } 
 }
 
+@media screen and (max-width: 760px){
+    .tag_pool{
+        height: 135px;
+        overflow: hidden;
+    }
+
+    .blog_search .pool_link{
+        display: block;
+    } 
+}
+
 @media screen and (max-width: 900px){
     .div-for-table {
         width: 350px;

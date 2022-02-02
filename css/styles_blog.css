@@ -780,6 +780,7 @@ ul.with_dash >  li:before {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+	height: fit-content;
 }
 
 .tag_pool .tag{
@@ -906,4 +907,10 @@ td {
 .blog.blog_article .article_block_right p a:visited,
 .blog.blog_article .article_block_right li a:visited{
 	color: #f26323;
+}
+
+.blog_search .pool_link{
+	display: none;
+	margin-top: 16px;
+	cursor: pointer;
 }
