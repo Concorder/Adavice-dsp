@@ -38,6 +38,7 @@ if (tags.length > 0 || searchForm.length > 0) {
         if (filterBase.indexOf(tag.innerHTML) < 0) {
             filterBase.push(tag.innerHTML)
         }
+        filterBase.sort()
     });
     if (onSearchPage && sessionStorage.getItem('filterRequest')) {
         filterType = sessionStorage.getItem('filterType');
@@ -55,6 +56,7 @@ if (tags.length > 0 || searchForm.length > 0) {
         });
         tags = document.querySelectorAll('.tag');
         cloudTags = document.querySelectorAll('.tag_pool .tag')
+
     }
 
     function addTag(el) {
@@ -73,6 +75,7 @@ if (tags.length > 0 || searchForm.length > 0) {
         if (onSearchPage) {
             sessionStorage.setItem('filterRequest', '')
             filterRequest = [];
+            
             if (this.innerHTML === "all") {
                 cloudTags.forEach(tag => {
                     tag.classList.remove("active")
