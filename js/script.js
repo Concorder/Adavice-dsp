@@ -55,6 +55,7 @@ if (tags.length > 0 || searchForm.length > 0) {
             addTag(el)
         });
         tags = document.querySelectorAll('.tag');
+
         cloudTags = document.querySelectorAll('.tag_pool .tag')
 
     }
@@ -119,8 +120,7 @@ if (tags.length > 0 || searchForm.length > 0) {
     }
 
     function renderResults(type) {
-
-        const searchHeading = document.querySelector(".first_block h2");
+        const searchHeading = document.querySelector(".searchHeader");
         let shownCounter = 0;
         let tagsToDisplay = ""
         if (type === "byTag") {
@@ -130,7 +130,12 @@ if (tags.length > 0 || searchForm.length > 0) {
             searchHeading.innerText = tagsToDisplay
         }
         if (type === "search") {
-            searchHeading.innerText = "Results for: " + filterRequest
+            if (filterRequest < 1){
+                searchHeading.innerText = "All"
+                cloudTags[0].classList.add("active")
+            } else {
+                searchHeading.innerText = "Results for: " + filterRequest
+            }
         }
 
         articleList.forEach(article => {
@@ -140,6 +145,7 @@ if (tags.length > 0 || searchForm.length > 0) {
                     article.setAttribute("data-filter", "1");
                     article.classList.remove("hidden")
                     shownCounter++
+                    return true
                 } else if (type === "search") {
                     article.querySelectorAll('h3').forEach(heading => {
                         if (heading.innerHTML.toLowerCase().indexOf(filterRequest) !== -1 || tag.innerHTML.indexOf(filterRequest) !== -1) {
@@ -162,7 +168,7 @@ if (tags.length > 0 || searchForm.length > 0) {
             articleList.forEach(article => {
                 article.classList.remove("hidden");
                 searchHeading.innerText = "All";
-                document.querySelector('.tag').classList.add('active');
+                document.querySelector(".tag").classList.add('active');
             })
         }
         if (shownCounter === 0 && type === "search") {
