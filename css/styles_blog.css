@@ -186,7 +186,7 @@ a.article_link{
 .searchHeader {
 	clear: both;
 	padding-top: 30px;
-	font-size: 30px;
+	font-size: 28px!important;
 }
 
 .hero .inline_block .article_image {
