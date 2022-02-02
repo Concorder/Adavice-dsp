@@ -120,6 +120,10 @@ if (tags.length > 0 || searchForm.length > 0) {
 		}
 	}
 	
+	if (filterRequest.length < 1) {
+		cloudTags[0].classList.add("active")
+	}
+	
 	function renderResults(type) {
 		
 		const searchHeading = document.querySelector(".searchHeader");
@@ -137,15 +141,13 @@ if (tags.length > 0 || searchForm.length > 0) {
 				tag.classList.remove("active")
 			})
 			cloudTags.forEach(tag => {
-				if (tag.innerText==filterRequest){
+				if (tag.innerText == filterRequest) {
 					tag.classList.add("active")
 				}
 				
 			})
-			
-			if (filterRequest < 1) {
+			if (filterRequest == "") {
 				searchHeading.innerText = "All"
-				
 				cloudTags[0].classList.add("active")
 			} else {
 				searchHeading.innerText = `Results for "${filterRequest}"`
