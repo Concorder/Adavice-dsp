@@ -103,7 +103,7 @@
     }
 
     .blog .inline_block .article_container {
-        width: 40%;
+        width: auto;
         margin-left: 21px;
         margin-right: 21px;
     }
@@ -492,5 +492,19 @@
 @media screen and (max-width: 500px){
     .div-for-table {
         width: 330px;
+    }
+}
+
+@media screen and (max-width: 1040px) and (min-width: 761px){
+    .blog .inline_block .article_container{
+        width: calc(100%/3);
+    }
+
+    .blog .inline_block .article_container .article_tag{
+        flex-wrap: wrap;
+    }    
+
+    .blog .inline_block .article_container .article_tag .tag{
+        margin-bottom: 10px;
     }
 }
