@@ -103,6 +103,7 @@
     }
 
     .blog .inline_block .article_container {
+        width: 40%;
         margin-left: 21px;
         margin-right: 21px;
     }
