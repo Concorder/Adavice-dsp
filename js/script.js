@@ -58,6 +58,9 @@ if (tags.length > 0 || searchForm.length > 0) {
 		tags = document.querySelectorAll('.tag');
 		
 		cloudTags = document.querySelectorAll('.tag_pool .tag')
+		if (filterRequest.length < 1) {
+			cloudTags[0].classList.add("active")
+		}
 		
 	}
 	
@@ -120,9 +123,7 @@ if (tags.length > 0 || searchForm.length > 0) {
 		}
 	}
 	
-	if (filterRequest.length < 1) {
-		cloudTags[0].classList.add("active")
-	}
+
 	
 	function renderResults(type) {
 		

@@ -68,6 +68,14 @@ header .wrapper {
 	max-width: 1550px;
 	padding: 0 30px;
 }
+.headerSign_up {
+	float: right;
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--highlight);
+	padding: 5px 0;
+	margin-right: 18px;
+}
 .button {
     -webkit-appearance: none;
     border: 0;
