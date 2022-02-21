@@ -4,8 +4,10 @@ window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             document.querySelector(".blog_header").style.top = "0";
+            document.querySelector('.subLogo').classList.remove('visible')
         } else {
             document.querySelector(".blog_header").style.top = "-95px";
+                document.querySelector('.subLogo').classList.add('visible')
         }
         prevScrollpos = currentScrollPos;
     }

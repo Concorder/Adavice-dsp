@@ -46,7 +46,7 @@ if (tags.length > 0 || searchForm.length > 0) {
 		filterRequest = [sessionStorage.getItem('filterRequest')];
 		renderResults(filterType);
 	}
-	
+
 	if (onSearchPage) {
 		// building tag cloud
 		

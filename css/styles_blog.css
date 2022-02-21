@@ -92,6 +92,22 @@ header.blog_header .blog_submenu{
 	background: #F0F0F0;
 	position: relative;
 }
+.blog_submenu .wrapper {
+	position: relative;
+}
+
+.blog_submenu .subLogo.visible {
+opacity: 1;
+	transition: 1s;
+}
+.blog_submenu .subLogo {
+	transition: 0.3s;
+	opacity: 0;
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
 
 header.blog_header .blog_submenu .desk-menu{
     position: absolute;
@@ -742,6 +758,7 @@ header.blog_header .input_search_button.mob_search{
     height: fit-content;
     padding-right: 50px;
 }
+
 
 .company_link{
 	text-align: center !important;
