@@ -1905,3 +1905,12 @@ margin-bottom: 15px;
     transform: rotate(-135deg);
  	top: -1px;
 }
+
+.body_article .banner_block{
+	display: flex;
+}
+
+.banner_block .banner_image{
+	width: 40%;
+	margin: auto;
+}
