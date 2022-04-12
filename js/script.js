@@ -104,7 +104,7 @@ if (tags.length > 0 || searchForm.length > 0) {
 		} else {
 			sessionStorage.setItem("filterRequest", this.innerHTML);
 			sessionStorage.setItem("filterType", "byTag")
-			window.location = './search.html';
+			window.location="/search.html"
 		}
 	}
 	
@@ -119,7 +119,7 @@ if (tags.length > 0 || searchForm.length > 0) {
 		} else {
 			sessionStorage.setItem('filterRequest', searchInput);
 			sessionStorage.setItem("filterType", "search")
-			window.location.pathname = 'search.html';
+			window.location = '/search.html';
 		}
 	}
 	
