@@ -344,7 +344,7 @@ h2.center.dark {
 }
 .halfblock form {
 	margin: auto 0;
-    width: 50%;
+    /*width: 50%;*/
 	text-align: center;
 }
 form {
@@ -607,7 +607,8 @@ body.contact > section:nth-child(5) {
 .contact .halfblock {
 	background: var(--main-color);
 	color: #fff;
-	height: 700px;
+	height: fit-content;
+
 }
 
 .contact .halfblock .img {
@@ -619,17 +620,17 @@ body.contact > section:nth-child(5) {
     background-size: cover;
     height: 100%;
 }
-.halfblock form >textarea,
-.halfblock form input:not(.button) {
-	text-align: center;
-    width: 350px;
-    height: 42px;
-    border-radius: 250px;
-    border: 2px solid var(--main-color);
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    text-align: left;
-}
+/*.halfblock form >textarea,*/
+/*.halfblock form input:not(.button) {*/
+/*	text-align: center;*/
+/*    width: 350px;*/
+/*    height: 42px;*/
+/*    border-radius: 250px;*/
+/*    border: 2px solid var(--main-color);*/
+/*    padding: 10px 20px;*/
+/*    margin-bottom: 15px;*/
+/*    text-align: left;*/
+/*}*/
 .halfblock form >textarea {
     resize: none;
     box-sizing: border-box;
@@ -1914,3 +1915,4 @@ margin-bottom: 15px;
 	width: 40%;
 	margin: auto;
 }
+

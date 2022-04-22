@@ -937,3 +937,9 @@ td {
 	margin-top: 16px;
 	cursor: pointer;
 }
+.subscribe_container{
+	background: linear-gradient(0deg, rgba(240, 173, 28, 0.5), rgba(240, 173, 28, 0.5)), url(../img/form_background.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
