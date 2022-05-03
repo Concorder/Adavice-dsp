@@ -1915,19 +1915,3 @@ margin-bottom: 15px;
 	width: 40%;
 	margin: auto;
 }
-
-.blog_article.push_article .inner_image.small_size{
-	width: 400px;
-}
-
-@media screen and (max-width: 500px) {
-	.blog_article.push_article .inner_image.small_size{
-		width: 100%;
-	}	
-}
-
-@media screen and (max-width: 1300px){
-	.div-for-table {
-    	min-width: 500px;
-	}
-}
