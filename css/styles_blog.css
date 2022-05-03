@@ -551,11 +551,18 @@ footer.blog_footer .social {
 .blog_article .article_block_left{
 	width: 30%;
 	height: fit-content;
+
 }
 
-.blog_article .article_block_left .subscribe_container{
+.blog_article .article_block_left .subscribe_container {
 	width: 100%;
 	height: fit-content;
+	background: linear-gradient(0deg, rgba(240, 173, 28, 0.5), rgba(240, 173, 28, 0.5)), url(/img/form_background.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.article_block_left .subscribe_container form {
+	margin: 0 auto!important;
 }
 
 .blog_article .article_block_left .tag_container{
