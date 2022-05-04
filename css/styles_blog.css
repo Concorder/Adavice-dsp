@@ -965,3 +965,14 @@ td {
     	min-width: 500px;
 	}
 }
+
+@media screen and (max-width: 900px){
+	.div-for-table {
+    	min-width: 330px;
+	}
+
+	td {
+		padding: 5px;
+		font-size: 7px;
+	}
+}
