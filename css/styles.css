@@ -1916,3 +1916,51 @@ margin-bottom: 15px;
 	margin: auto;
 }
 
+._form-title{
+	line-height: 1.4 !important;
+}
+
+.main .halfblock{
+	height: 100%;
+	background-color: #133f6f
+}
+
+.main .halfblock .wrapper{
+	height: 100%;
+}
+
+.main .halfblock .img{
+	height: 100%;
+}
+
+.main form._form._form_1._inline-form{
+	margin: 0 !important;
+}
+
+@media (max-width: 980px){
+	.contact .halfblock, .ppc .halfblock{
+		height: fit-content !important;
+	}
+
+	div._form_1 form{
+		margin: 25px auto 25px !important;
+		max-width: 420px !important;
+	}
+
+	.contact .halfblock .wrapper{
+		justify-content: center;
+	}
+
+	._field13 select{
+		width: 100% !important;
+	}
+
+	.main .halfblock{
+		background: #133f6f;
+	}
+
+	.main .halfblock .wrapper{
+		justify-content: center;
+	}
+}
+
