@@ -620,6 +620,10 @@ body.contact > section:nth-child(5) {
     background-size: cover;
     height: 100%;
 }
+.contact ._form-content > ._field7> fieldset > div:nth-child(1) {
+	color: #f0ad1d;
+	width: 100%;
+}
 /*.halfblock form >textarea,*/
 /*.halfblock form input:not(.button) {*/
 /*	text-align: center;*/
