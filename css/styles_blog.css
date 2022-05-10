@@ -921,7 +921,7 @@ table {
 td {
 	text-align: center;
 	padding: 10px;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 .blog.blog_section.blog_search .article_tag .tag:nth-child(n+3){
@@ -949,4 +949,30 @@ td {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.blog_article.push_article .inner_image.small_size{
+	width: 400px;
+}
+
+@media screen and (max-width: 500px) {
+	.blog_article.push_article .inner_image.small_size{
+		width: 100%;
+	}	
+}
+
+@media screen and (max-width: 1300px){
+	.div-for-table {
+    	min-width: 500px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.div-for-table {
+    	min-width: 330px;
+	}
+
+	td {
+		padding: 5px;
+		font-size: 7px;
+	}
 }
