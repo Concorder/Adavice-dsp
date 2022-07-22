@@ -917,6 +917,7 @@
 							<div class="article_tag">
 								<a href="#" class="main_tag tag">tracking</a>
 								<a href="#" class="main_tag tag">tracking parameters</a>
+								<a href="#" class="main_tag tag">token</a>
 								<a href="#" class="tag">ad formats</a>
 								<a href="#" class="tag">ad types</a>
 								<a href="#" class="tag">affiliates</a>
@@ -929,10 +930,11 @@
 								<a href="#" class="tag">cpc</a>
 								<a href="#" class="tag">cpm</a>
 								<a href="#" class="tag">dating</a>
-								<a href="#" class="tag">downloads</a>
+								
 
 								<a class="see_more"> See more</a>
 
+								<a href="#" class="tag more_tags">downloads</a>
 								<a href="#" class="tag more_tags">dsp</a>
 								<a href="#" class="tag more_tags">finance</a>
 								<a href="#" class="tag more_tags">gambling</a>
@@ -978,21 +980,23 @@
 							<div class="article_tag">
 								<a href="#" class="main_tag tag">tracking</a>
 								<a href="#" class="main_tag tag">tracking parameters</a>
+								<a href="#" class="tag">token</a>
 							</div>
 							<div class="article_text">
 								<p class="description">
-									Find available tracking parameters for setting up integration with AdaviceDSP and
-									receiving detailed statistics.
+									Find available tracking parameters/tokens for setting up integration with AdaviceDSP
+									and receiving detailed statistics.
 								</p>
 							</div>
 						</div>
 
 						<p>
-							Get all the needed details about each conversion with the help of tracking parameters. By
-							setting up the tracking with AdaviceDSP you would be able to check the statistics in the
-							Reporting panel and easily optimize your results.
+							Get all the needed details about each conversion with the help of tracking parameters or
+							tokens. By setting up the tracking with AdaviceDSP you would be able to check the statistics
+							in the Reporting panel and easily optimize your results.
+
 						</p>
-						
+
 						<p>
 							Integrate with AdaviceDSP by adding the postback URL:
 							<b>http://rtb.adx1.com/log?action=conversion&key=[CLICK_ID]</b><br />
@@ -1001,18 +1005,16 @@
 						</p>
 
 						<h3>
-							The available tracking parameters:
+							The available tracking parameters/tokens:
 						</h3>
 
 						<p>
-							<b>[SUB_LIST_ID]</b> - returns a unique Subscriber list ID/Source ID for <b>push ad
-								format</b><br>
-							<b>[ZONE_ID]</b> - returns a unique Subscriber list ID/Source ID for <b>pop ad
-								format</b><br>
+							<span style="color: var(--highlight);"><b>[CLICK_ID]</b> - returns a unique click ID (for
+								conversion tracking)<br></span>
+							<b>[SUB_LIST_ID]</b> - returns a unique Subscriber list ID/Source ID<br>
 							<b>[PUBLISHER_ID]</b> - returns a unique ID of the publisher that can contain several
 							websites<br>
 							<b>[SITE_ID]</b> - returns a unique website ID<br>
-							<b>[CLICK_ID]</b> - returns a unique click ID (for conversion tracking)<br>
 							<b>[BID_PRICE]</b> - returns winning price of the click<br>
 							<b>[CAMPAIGN_ID]</b> - returns a unique campaign ID in our system<br>
 							<b>[CAMPAIGN_NAME]</b> - returns a campaign name<br>
@@ -1028,7 +1030,7 @@
 							<b>[IP]</b> - returns a user's IP<br>
 							<b>[USER_ID]</b> - returns a unique ID of the visitor<br>
 							<b>[RANDOM_NUMBER]</b> - ensures that a fresh call is made to the ad server every time the
-							code is executed<br>
+							code is executed
 						</p>
 
 
@@ -1116,39 +1118,42 @@
 					</div>
 
 					<div class="article_container subscribe_container second_version">
-						<div id="mlb2-4978340" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4978340">
+						<div id="mlb2-4978340"
+							class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4978340">
 							<div class="ml-form-align-center">
 								<div class="ml-form-embedWrapper embedForm">
-									<div class="_form_7"></div><script src="https://adavice.activehosted.com/f/embed.php?id=7" type="text/javascript" charset="utf-8"></script>
-					<!--<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">-->
-					<!--                    <div class="ml-form-embedContent" style="">-->
-					<!--                        <h4>Don't Miss a Post</h4>-->
-					<!--                        <p><span style="font-size:24px">Subscribe to receive the most&nbsp;fresh-->
-					<!--									updates&nbsp;</span></p>-->
-					<!--                        <p><span style="font-size:24px"></span></p>-->
-					<!--                    </div>-->
-					<!--                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/n7e4d8"-->
-					<!--                          data-code="n7e4d8" method="post" target="_blank">-->
-					<!--                        <div class="ml-form-formContent">-->
-					<!--                            <div class="ml-form-fieldRow ml-last-item">-->
-					<!--                                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">-->
-					<!--                                    <input aria-label="email" aria-required="true" type="email" class="form-control"-->
-					<!--                                           data-inputmask="" name="fields[email]" placeholder="Email"-->
-					<!--                                           autocomplete="email">-->
-					<!--                                </div>-->
-					<!--                            </div>-->
-					<!--                        </div>-->
-					<!--                        <input type="hidden" name="ml-submit" value="1">-->
-					<!--                        <div class="ml-form-embedSubmit">-->
-					<!--                            <button type="submit" class="primary">Subscribe</button>-->
-					<!--                            <button disabled="disabled" style="display:none" type="button" class="loading">-->
-					<!--                                <div class="ml-form-embedSubmitLoad"></div>-->
-					<!--                                <span class="sr-only">Loading...</span>-->
-					<!--                            </button>-->
-					<!--                        </div>-->
-					<!--                        <input type="hidden" name="anticsrf" value="true">-->
-					<!--                    </form>-->
-					<!--                </div>-->
+									<div class="_form_7"></div>
+									<script src="https://adavice.activehosted.com/f/embed.php?id=7"
+										type="text/javascript" charset="utf-8"></script>
+									<!--<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">-->
+									<!--                    <div class="ml-form-embedContent" style="">-->
+									<!--                        <h4>Don't Miss a Post</h4>-->
+									<!--                        <p><span style="font-size:24px">Subscribe to receive the most&nbsp;fresh-->
+									<!--									updates&nbsp;</span></p>-->
+									<!--                        <p><span style="font-size:24px"></span></p>-->
+									<!--                    </div>-->
+									<!--                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/n7e4d8"-->
+									<!--                          data-code="n7e4d8" method="post" target="_blank">-->
+									<!--                        <div class="ml-form-formContent">-->
+									<!--                            <div class="ml-form-fieldRow ml-last-item">-->
+									<!--                                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">-->
+									<!--                                    <input aria-label="email" aria-required="true" type="email" class="form-control"-->
+									<!--                                           data-inputmask="" name="fields[email]" placeholder="Email"-->
+									<!--                                           autocomplete="email">-->
+									<!--                                </div>-->
+									<!--                            </div>-->
+									<!--                        </div>-->
+									<!--                        <input type="hidden" name="ml-submit" value="1">-->
+									<!--                        <div class="ml-form-embedSubmit">-->
+									<!--                            <button type="submit" class="primary">Subscribe</button>-->
+									<!--                            <button disabled="disabled" style="display:none" type="button" class="loading">-->
+									<!--                                <div class="ml-form-embedSubmitLoad"></div>-->
+									<!--                                <span class="sr-only">Loading...</span>-->
+									<!--                            </button>-->
+									<!--                        </div>-->
+									<!--                        <input type="hidden" name="anticsrf" value="true">-->
+									<!--                    </form>-->
+									<!--                </div>-->
 									<div class="ml-form-successBody row-success" style="display:none">
 										<div class="ml-form-successContent">
 											<h4>Thank you!</h4>
@@ -1164,10 +1169,13 @@
 								r(".ml-subscribe-form-4978340 .row-success").show(), r(".ml-subscribe-form-4978340 .row-form").hide()
 							}
 						</script>
-						<img src="https://track.mailerlite.com/webforms/o/4978340/n7e4d8?v1637936829" width="1" height="1"
-							 style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
-						<script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
-								type="text/javascript"></script>
+						<img src="https://track.mailerlite.com/webforms/o/4978340/n7e4d8?v1637936829" width="1"
+							height="1"
+							style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block"
+							alt="." border="0">
+						<script
+							src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
+							type="text/javascript"></script>
 					</div>
 
 					<div class="article_container">
