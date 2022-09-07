@@ -1010,3 +1010,18 @@ table.table_no_border {
 		font-size: 14px;
 	}
 }
+
+.p_list{
+	margin-bottom: 30px;
+	padding-bottom: 0 !important;
+}
+
+.p_list, .span_list{
+	padding-left: 40px;
+}
+
+.span_list{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	display: inline-block;
+}
