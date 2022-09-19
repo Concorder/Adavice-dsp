@@ -51,6 +51,7 @@
 		font-size: 14px;
 		height: 47px;
 	}
+
 	.submenu li{
 		height: auto;
 	}
@@ -189,6 +190,9 @@
 		color: #fff;
 	}
 
+	.dps .menu-items-container {
+		top: 350px;
+	}
 
 	/* circular background for the icons*/
 	.circle-icon {
@@ -1013,4 +1017,15 @@ text-align: center;
     #services:hover::after{
  	    top: 3px;
     }
+}
+
+@media (max-width: 1150px) {
+	.dps .desk-menu li, 
+	.dps .desk-menu .button  {
+		font-size: 12px;
+	}
+
+	.dps .desk-menu li{
+		padding: 0px 5px;
+	}
 }
